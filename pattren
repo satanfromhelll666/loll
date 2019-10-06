@@ -1,0 +1,30 @@
+def patturn_3():
+
+            ch = input()
+
+            b = len(ch)
+            count=0
+
+            if(b>=4):
+                if(ch[0]>='0'and ch[0]<='9'):
+                    #print(1)
+                    if(ch[1]>='A'and ch[1]<='Z'):
+                        #print(2)
+                        if((ch[2]>='a' and ch[2]<= 'z') or (ch[2]>='A' and ch[2]<='Z')):
+                            print('not accepted')
+
+                            return 
+                        else:
+                            for i in range (3,b):
+                                #print(i)
+                                if((ch[i] >= 'a' and ch[i] <= 'z') or (ch[i] >= 'A' and ch[i] <= 'Z')or(ch[0]>='0'and ch[0]<='9')): 
+                                    count =count+1
+                                    #print(count)
+
+            
+            if(count == b-3):
+                print('accept')
+            else:
+                print('not accepted')
+    
+        patturn_3()
