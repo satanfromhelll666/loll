@@ -1,0 +1,22 @@
+ef match_5():
+            ch = input()
+
+            a = len(ch)
+
+            if(a>=8):
+                for i in range(0,a):
+                    if(ch[i] >= 'a' and ch[i] <= 'z'):
+                        for i in range(0,a):
+                            if(ch[i] >= 'A' and ch[i] <= 'Z'):
+                                for i in range(0,a):
+                                    if(ch[i] >= '0' and ch[i] <= '9'):
+                                        if(ch[a-1]=='@' or ch[a-1]=='#' or ch[a-1]=='$' or ch[a-1]=='&'):
+                                            print('accept')
+                                            return
+                                        
+            
+            print('not accept')
+
+
+    
+        match_5()
