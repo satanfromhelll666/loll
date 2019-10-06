@@ -1,0 +1,36 @@
+def complex_num_2():
+
+
+            ch = input()
+
+            a = len(ch)
+
+            if(a==4):
+                if(ch[0] >= '0' and ch[0] <= '9'):
+                    if(ch[1]=='+' or ch[1]=='-' ):
+                        if(ch[2]=='i' or (ch[2] >= '0' and ch[2] <= '9')):
+                            if(ch[3]=='i' or (ch[3] >= '0' and ch[3] <= '9') or ch[3]>='a'and ch[3]<='z'):
+                                print('accept')
+                                return
+
+            if(a==6):
+                if((ch[0]=='z' or ch[0]=='y')):
+                    if(ch[1]=='='):
+                        if((ch[2] >= '0' and ch[2] <= '9')or(ch[2] >= 'a' and ch[2] <= 'z')):
+                            if(ch[3]=='+' or ch[3]=='-' ):
+                                if(ch[4]=='i' or (ch[4] >= '0' and ch[4] <= '9')):
+                                    if(ch[5]=='i' or (ch[5] >= '0' and ch[5] <= '9')or(ch[5]=='b')):
+                                        print('accept')
+                                        return
+
+
+
+
+                        
+            
+
+            print('not accept')
+                            
+
+            
+        complex_num_2()
