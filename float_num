@@ -1,0 +1,34 @@
+def float_num_4():
+            x =0
+            y=0
+            z=0
+            ch = input()
+            for i in ch:
+                if (i.isalpha()):
+                    
+                    print('not accepet')
+                    return
+
+                if(i=='+'):
+                    x+=1
+                    
+                if(i=='-'):
+                    y +=1
+                if(i=='.'):
+                    z+=1
+
+
+           
+            if(ch[len(ch)-1] !='.' ):
+                if(x<=1 and y<=1 and z <=1):
+                    if(ch[0] =='+' or ch[0] =='-' or ch[0] =='.' or (ch[0]>='0' and ch[0]<='9') ):
+                        print('accept2')
+                        return
+
+            else:
+                print('not accept3')
+            
+    
+
+    
+        float_num_4()
