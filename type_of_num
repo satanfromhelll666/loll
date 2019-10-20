@@ -1,0 +1,24 @@
+class num(object):
+    """__init__() functions as the class constructor"""
+    def __init__(self, name=None, type1=None, value=None):
+        self.name = name
+        self.type1 = type1
+        self.value = value
+
+
+
+def test():
+
+    class num(object):
+        def __init__(self, name=None, type1=None, value=None):
+            self.name = name
+            self.type1 = type1
+            self.value = value
+
+    obj_of_num = []
+    obj_of_num.append(num('a','int','NULL'))
+
+    print(obj_of_num[0].name,obj_of_num[0].type1,obj_of_num[0].value)
+
+test()
+
