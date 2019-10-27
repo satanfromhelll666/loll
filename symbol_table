@@ -27,6 +27,11 @@ x = ' '
 
 while True:
 
+  print('1. insert')
+  print('2. find')
+  print('3. delete')
+  print('4. print all')
+  print('5. upadet')
   #lenn=len(obj_of_num)
 
   a = int(input())
@@ -152,10 +157,11 @@ while True:
       temp = input()
       for i in range(len(obj_of_num)):
         if(temp == obj_of_num[i].var()):
-          print('yes')
+          print(i+1,end = ' ')
+          obj_of_num[i].function()
           return
         
-      print('no')
+      #print('no')
     
     find()
 
@@ -184,6 +190,3 @@ while True:
       
     
     update()
-
-
-
