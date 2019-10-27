@@ -1,0 +1,189 @@
+import re
+
+class num():
+    """__init__() functions as the class constructor"""
+    def __init__(self, name=None, type1=None, value=None):
+        #self.idd = idd
+        self.name = name#int or double etc
+        self.type1 = type1#name of variable a,b,c
+        self.value = value
+        
+    def function(self):
+        print(self.name,'  ',self.type1, ' ' ,self.value)
+
+    def var(self):
+      return self.type1
+
+    def update1(self,value):
+      self.value = value
+    
+    def update2(self,name):
+      self.name = name
+
+obj_of_num = []
+countt =1
+#strr = input()
+x = ' '
+
+while True:
+
+  #lenn=len(obj_of_num)
+
+  a = int(input())
+
+  if(a==1):
+    def insert():
+
+      global x 
+      #global strr
+
+      strr = input()
+      x = strr.replace(';',' ')
+      #print(x)
+
+
+
+      arr = []
+      #arr= x.split(' ')
+      
+      global countt
+
+      count1= 0;
+      
+      #obj_of_num.append(num(countt,arr[0],arr[1],arr[2]))
+
+      flag1 = 0
+
+      for i in range(len(x)):
+        if(x[i]==','):
+          flag1 += 1
+
+      
+
+      
+      if(flag1==0):
+        for j in range(len(x)):
+          if(x[j] == '=' ):
+            x = x.replace('=',' ')
+            #print(x)
+            arr= x.split(' ')
+
+            #arr[2] = "NULL"
+            obj_of_num.append(num(arr[0],arr[1],arr[2]))
+            countt +=1
+            return
+
+        arr= x.split(' ')
+        arr[2] = "NULL"
+        obj_of_num.append(num(arr[0],arr[1],arr[2]))
+        countt +=1
+        return
+
+      if(flag1>=1):
+
+        x = x.replace(',',' ')
+        #print(x)
+        for i in range(len(x)):
+          if(x[i]=='='):
+            x = x.replace('=',' ')
+            #x = strr.replace(',',' ')
+            arr= x.split(' ')
+            #print(arr)
+            count1 = 1
+            for j in range(0,flag1+1):
+              
+              obj_of_num.append(num(arr[0],arr[j+count1],arr[j+count1+1]))
+              countt +=1
+              count1 +=1
+            return    
+          
+        else:
+          arr=x.split(' ')
+          count1 = 1
+          for j in range(0,flag1+1):
+              
+              obj_of_num.append(num(arr[0],arr[j+1],"NULL"))
+              countt +=1
+              
+          
+          return
+
+              
+
+
+      
+      #for i in range(len(x)):
+
+              
+    
+      
+      #obj_of_num.append(num('float','b','5'))
+      arr.clear()
+
+
+      #print(obj_of_num[1].name,obj_of_num[0].type1,obj_of_num[0].value)
+
+    insert()
+
+  if(a==4):
+    def printt():
+      for i in range(len(obj_of_num)):
+        print(i+1, end = ' ' ) 
+        obj_of_num[i].function()
+
+    printt()
+
+  if(a==3):
+    def delete():
+      temp = input()
+      for i in range(len(obj_of_num)):
+        if(temp == obj_of_num[i].var()):
+          del obj_of_num[i]
+          return
+        
+      
+    
+    delete()
+
+
+  if(a==2):
+
+    def find():
+      temp = input()
+      for i in range(len(obj_of_num)):
+        if(temp == obj_of_num[i].var()):
+          print('yes')
+          return
+        
+      print('no')
+    
+    find()
+
+  if(a==5):
+
+    def update():
+      temp = input()
+      for i in range(len(obj_of_num)):
+        if(temp == obj_of_num[i].var()):
+          print("press 1 value or press 2 for type")
+        
+          s = int(input())
+
+          if(s==1):
+            lol1 = input()
+            obj_of_num[i].update1(lol1)
+          elif(s==2):
+            lol2 = input()
+            obj_of_num[i].update2(lol2)
+          else:
+            print('wrong')
+
+          
+          
+        
+      
+    
+    update()
+
+
+
